@@ -1,0 +1,1 @@
+SELECT stack.Customers.name from stack.Customers,stack.Orders,stack.OrderItems WHERE stack.Customers.row_id =stack.Orders.customer_id  AND stack.Orders.row_id = stack.OrderItems.order_id AND stack.OrderItems.name = N'Кассовый аппарат' AND stack.Orders.registered_at > '2019-12-31' GROUP BY Customers.name
